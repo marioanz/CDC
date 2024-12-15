@@ -1,0 +1,138 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>CDCCube</Database>
+    <Server>SQL2012</Server>
+    <ConnectionString>DataSource=SQL2012;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>/3nHaa/2MH05w/H5joFpWoJ9+KU=7/9/2014 5:19:59 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>CDC Cube</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>tXRg8KAgQTLZX4Y3BNV//TrHgx8=1/8/2013 1:18:20 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>CDC Cube</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>e3Pv+v2lm0XbFZ6FJ3MmOvU1pjs=1/9/2013 1:10:26 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Area</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>L9BelqlFGk4W76R27bWzou1TgCo=1/9/2013 1:10:26 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Brand</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>SdlYiBIXZVbJ9yY32J94IuxilG4=1/9/2013 1:10:26 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Brand Sub</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>uET6rifrt1mW3og8CjlDH0V6bik=1/9/2013 1:10:26 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Brewer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>BDHyA99fC+LiEvzKQiIUddxo8O4=1/9/2013 1:10:26 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Class</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>yzyVxyNqjOoAYdm8+0a/IlTjlEU=1/9/2013 1:10:26 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Product</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>mDeSl0qTB2AnLiN4PAdS47iBfBQ=1/9/2013 1:10:26 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Supervisor</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>lsbikif9eBJLuytOoGL2Tt+1Tfc=1/9/2013 1:10:26 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Dim Type</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>EkzDfWLFLGFHsBs5CFhUddaq6M4=1/15/2013 4:43:32 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>SBlcAszZy535JdNDdE7q21milvs=1/9/2013 1:10:26 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Account</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>C/aL77OEe2yb2z+9GTpUud3Xexo=1/9/2013 1:10:26 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Mode</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Pufb9h7AZ75KWL9soMTTd7wN8mY=9/27/2012 7:19:18 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>Reason</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>xywftn/Q7p0jvQmtXghg6d4oL/Y=7/9/2014 1:31:56 PM7/9/2014 4:52:46 PMwUIdlB1/H60X329HTZTtY/ckIMM=7/9/2014 1:31:56 PM7/9/2014 4:52:46 PM</TimeStamp>
+        <ID>
+          <String>CDC</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>Y7DdSpNc/ymSuVil6kL7mCJXfAs=8/25/2012 11:03:42 AM7/9/2014 4:52:46 PM</TimeStamp>
+      <ID>
+        <String>CDCCube</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2014-08-21T17:56:48.336667Z</LastDeployed>
+</DeploymentSnapshot>

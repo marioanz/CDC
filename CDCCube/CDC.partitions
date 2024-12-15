@@ -1,0 +1,654 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="28ba0a55-7a06-4929-91dc-dfd8ae54229a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>CDC</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Daily T</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="df5f78be-f04f-4133-8531-0962d4d90472">
+          <ID>Fact Daily T</ID>
+          <Name>Fact Daily T 2010</Name>
+          <CreatedTimestamp>0001-01-01T07:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T07:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T07:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="543bb3bf-00e6-4d88-90ab-34a18000c114">
+            <DataSourceID>CDC Cube</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[FactDailyT].[AccountKey],[dbo].[FactDailyT].[ProductKey],[dbo].[FactDailyT].[BrandKey],[dbo].[FactDailyT].[BrandSubKey],[dbo].[FactDailyT].[BrewerKey],[dbo].[FactDailyT].[AreaKey],[dbo].[FactDailyT].[SupervisorKey],[dbo].[FactDailyT].[ClassKey],[dbo].[FactDailyT].[TypeKey],[dbo].[FactDailyT].[OrderDateKey],[dbo].[FactDailyT].[ModeKey],[dbo].[FactDailyT].[ReasonKey],[dbo].[FactDailyT].[OrderNum],[dbo].[FactDailyT].[OrderLine],[dbo].[FactDailyT].[UM],[dbo].[FactDailyT].[Qty],[dbo].[FactDailyT].[Oz],[dbo].[FactDailyT].[Cost],[dbo].[FactDailyT].[AveCost],[dbo].[FactDailyT].[Price],[dbo].[FactDailyT].[ExtPrice],[dbo].[FactDailyT].[FrontLinePrice],[dbo].[FactDailyT].[Discount],[dbo].[FactDailyT].[ExtAmt],[dbo].[FactDailyT].[ExtDisc],[dbo].[FactDailyT].[SalesAmt],[dbo].[FactDailyT].[CreatedOn],[dbo].[FactDailyT].[InsertAuditKey],[dbo].[FactDailyT].[UpdateAuditKey]
+		FROM [dbo].[FactDailyT]
+		WHERE [OrderDateKey] BETWEEN 20100101 AND 20101231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>4655456</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+        <Partition dwd:design-time-name="8b453813-f690-4e38-8098-6442d775c1ff">
+          <ID>Fact Daily T 1</ID>
+          <Name>Fact Daily T 2011</Name>
+          <CreatedTimestamp>0001-01-01T07:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T07:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T07:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="ce3336f5-1a85-421e-8530-c91bb61df03b">
+            <DataSourceID>CDC Cube</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[FactDailyT].[AccountKey],[dbo].[FactDailyT].[ProductKey],[dbo].[FactDailyT].[BrandKey],[dbo].[FactDailyT].[BrandSubKey],[dbo].[FactDailyT].[BrewerKey],[dbo].[FactDailyT].[AreaKey],[dbo].[FactDailyT].[SupervisorKey],[dbo].[FactDailyT].[ClassKey],[dbo].[FactDailyT].[TypeKey],[dbo].[FactDailyT].[OrderDateKey],[dbo].[FactDailyT].[ModeKey],[dbo].[FactDailyT].[ReasonKey],[dbo].[FactDailyT].[OrderNum],[dbo].[FactDailyT].[OrderLine],[dbo].[FactDailyT].[UM],[dbo].[FactDailyT].[Qty],[dbo].[FactDailyT].[Oz],[dbo].[FactDailyT].[Cost],[dbo].[FactDailyT].[AveCost],[dbo].[FactDailyT].[Price],[dbo].[FactDailyT].[ExtPrice],[dbo].[FactDailyT].[FrontLinePrice],[dbo].[FactDailyT].[Discount],[dbo].[FactDailyT].[ExtAmt],[dbo].[FactDailyT].[ExtDisc],[dbo].[FactDailyT].[SalesAmt],[dbo].[FactDailyT].[CreatedOn],[dbo].[FactDailyT].[InsertAuditKey],[dbo].[FactDailyT].[UpdateAuditKey]
+		FROM [dbo].[FactDailyT]
+		WHERE [OrderDateKey] BETWEEN 20110101 AND 20111231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="4ebdf74c-21ae-4af3-99e5-c9cfbe1c8955">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <AggregationStorage>MolapOnly</AggregationStorage>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="8c7edc47-e5d7-49ee-890a-416b641e3f64">
+              <NotificationTechnique>Server</NotificationTechnique>
+            </Source>
+          </ProactiveCaching>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+        <Partition dwd:design-time-name="d21ff2df-0245-4e74-8c36-3a4335fbc0e4">
+          <ID>Fact Daily T 2012</ID>
+          <Name>Fact Daily T 2012</Name>
+          <CreatedTimestamp>0001-01-01T07:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T07:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T07:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="6c1f902f-fdde-4728-80bc-8d55dda6af3c">
+            <DataSourceID>CDC Cube</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[FactDailyT].[AccountKey],[dbo].[FactDailyT].[ProductKey],[dbo].[FactDailyT].[BrandKey],[dbo].[FactDailyT].[BrandSubKey],[dbo].[FactDailyT].[BrewerKey],[dbo].[FactDailyT].[AreaKey],[dbo].[FactDailyT].[SupervisorKey],[dbo].[FactDailyT].[ClassKey],[dbo].[FactDailyT].[TypeKey],[dbo].[FactDailyT].[OrderDateKey],[dbo].[FactDailyT].[ModeKey],[dbo].[FactDailyT].[ReasonKey],[dbo].[FactDailyT].[OrderNum],[dbo].[FactDailyT].[OrderLine],[dbo].[FactDailyT].[UM],[dbo].[FactDailyT].[Qty],[dbo].[FactDailyT].[Oz],[dbo].[FactDailyT].[Cost],[dbo].[FactDailyT].[AveCost],[dbo].[FactDailyT].[Price],[dbo].[FactDailyT].[ExtPrice],[dbo].[FactDailyT].[FrontLinePrice],[dbo].[FactDailyT].[Discount],[dbo].[FactDailyT].[ExtAmt],[dbo].[FactDailyT].[ExtDisc],[dbo].[FactDailyT].[SalesAmt],[dbo].[FactDailyT].[CreatedOn],[dbo].[FactDailyT].[InsertAuditKey],[dbo].[FactDailyT].[UpdateAuditKey]
+		FROM [dbo].[FactDailyT]
+		WHERE [OrderDateKey] BETWEEN 20120101 AND 20121231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <ProactiveCaching dwd:design-time-name="119bbd77-8b16-4944-8ad5-606a7f3a4d91">
+            <SilenceInterval>-PT1S</SilenceInterval>
+            <Latency>-PT1S</Latency>
+            <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+            <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+            <AggregationStorage>MolapOnly</AggregationStorage>
+            <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="dff885ca-0984-4b42-ab42-31fa0f855e3e">
+              <NotificationTechnique>Server</NotificationTechnique>
+            </Source>
+          </ProactiveCaching>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+        <Partition dwd:design-time-name="e5646b2d-06ee-41f5-8f91-0e2f2360a8ca">
+          <ID>Fact Daily T 2</ID>
+          <Name>Fact Daily T 2013</Name>
+          <CreatedTimestamp>0001-01-01T07:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T07:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T07:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="560fb578-9166-45e5-83f2-ddc9f854b9fb">
+            <DataSourceID>CDC Cube</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[FactDailyT].[AccountKey],[dbo].[FactDailyT].[ProductKey],[dbo].[FactDailyT].[BrandKey],[dbo].[FactDailyT].[BrandSubKey],[dbo].[FactDailyT].[BrewerKey],[dbo].[FactDailyT].[AreaKey],[dbo].[FactDailyT].[SupervisorKey],[dbo].[FactDailyT].[ClassKey],[dbo].[FactDailyT].[TypeKey],[dbo].[FactDailyT].[OrderDateKey],[dbo].[FactDailyT].[ModeKey],[dbo].[FactDailyT].[ReasonKey],[dbo].[FactDailyT].[OrderNum],[dbo].[FactDailyT].[OrderLine],[dbo].[FactDailyT].[UM],[dbo].[FactDailyT].[Qty],[dbo].[FactDailyT].[Oz],[dbo].[FactDailyT].[Cost],[dbo].[FactDailyT].[AveCost],[dbo].[FactDailyT].[Price],[dbo].[FactDailyT].[ExtPrice],[dbo].[FactDailyT].[FrontLinePrice],[dbo].[FactDailyT].[Discount],[dbo].[FactDailyT].[ExtAmt],[dbo].[FactDailyT].[ExtDisc],[dbo].[FactDailyT].[SalesAmt],[dbo].[FactDailyT].[CreatedOn],[dbo].[FactDailyT].[InsertAuditKey],[dbo].[FactDailyT].[UpdateAuditKey]
+		FROM [dbo].[FactDailyT]
+		WHERE [OrderDateKey] BETWEEN 20130101 AND 20131231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+        <Partition dwd:design-time-name="bd12e4ae-b249-4625-9c66-b2099e300883">
+          <ID>Fact Daily T 2014</ID>
+          <Name>Fact Daily T 2014</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <Annotations>
+            <Annotation>
+              <Name>AggregationPercent</Name>
+              <Value></Value>
+            </Annotation>
+          </Annotations>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="QueryBinding" dwd:design-time-name="03a81ab2-9ca6-472f-a8d2-8a8b4f05cde4">
+            <DataSourceID>CDC Cube</DataSourceID>
+            <QueryDefinition>SELECT [dbo].[FactDailyT].[AccountKey],[dbo].[FactDailyT].[ProductKey],[dbo].[FactDailyT].[BrandKey],[dbo].[FactDailyT].[BrandSubKey],[dbo].[FactDailyT].[BrewerKey],[dbo].[FactDailyT].[AreaKey],[dbo].[FactDailyT].[SupervisorKey],[dbo].[FactDailyT].[ClassKey],[dbo].[FactDailyT].[TypeKey],[dbo].[FactDailyT].[OrderDateKey],[dbo].[FactDailyT].[ModeKey],[dbo].[FactDailyT].[ReasonKey],[dbo].[FactDailyT].[OrderNum],[dbo].[FactDailyT].[OrderLine],[dbo].[FactDailyT].[UM],[dbo].[FactDailyT].[Qty],[dbo].[FactDailyT].[Oz],[dbo].[FactDailyT].[Cost],[dbo].[FactDailyT].[AveCost],[dbo].[FactDailyT].[Price],[dbo].[FactDailyT].[ExtPrice],[dbo].[FactDailyT].[FrontLinePrice],[dbo].[FactDailyT].[Discount],[dbo].[FactDailyT].[ExtAmt],[dbo].[FactDailyT].[ExtDisc],[dbo].[FactDailyT].[SalesAmt],[dbo].[FactDailyT].[CreatedOn],[dbo].[FactDailyT].[InsertAuditKey],[dbo].[FactDailyT].[UpdateAuditKey]
+		FROM [dbo].[FactDailyT]
+		WHERE [OrderDateKey] BETWEEN 20140101 AND 20141231</QueryDefinition>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2013-01-10T14:05:18.016667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2013-01-10T14:05:18.016667Z</LastSchemaUpdate>
+          <EstimatedRows>4655456</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>Class</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Class Key</AttributeID>
+                  <EstimatedCount>37</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Class ID</AttributeID>
+                  <EstimatedCount>37</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Class</AttributeID>
+                  <EstimatedCount>37</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Dim Brand</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Brand Key</AttributeID>
+                  <EstimatedCount>178</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brand ID</AttributeID>
+                  <EstimatedCount>180</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brewer</AttributeID>
+                  <EstimatedCount>52</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brand</AttributeID>
+                  <EstimatedCount>178</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Area</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Area Key</AttributeID>
+                  <EstimatedCount>21</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Area ID</AttributeID>
+                  <EstimatedCount>21</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Area</AttributeID>
+                  <EstimatedCount>21</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Supervisor</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Supervisor Key</AttributeID>
+                  <EstimatedCount>21</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Supervisor ID</AttributeID>
+                  <EstimatedCount>21</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Supervisor</AttributeID>
+                  <EstimatedCount>20</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Type</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Type Key</AttributeID>
+                  <EstimatedCount>7</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Type ID</AttributeID>
+                  <EstimatedCount>7</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Type</AttributeID>
+                  <EstimatedCount>7</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Product</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Product Key</AttributeID>
+                  <EstimatedCount>2727</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brand</AttributeID>
+                  <EstimatedCount>162</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brand Sub</AttributeID>
+                  <EstimatedCount>971</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brewer</AttributeID>
+                  <EstimatedCount>50</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Container</AttributeID>
+                  <EstimatedCount>12</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>UM</AttributeID>
+                  <EstimatedCount>7</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Territory</AttributeID>
+                  <EstimatedCount>16</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Type</AttributeID>
+                  <EstimatedCount>5</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Class</AttributeID>
+                  <EstimatedCount>28</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>ABV</AttributeID>
+                  <EstimatedCount>66</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Product</AttributeID>
+                  <EstimatedCount>2802</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Product ID</AttributeID>
+                  <EstimatedCount>2802</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Oz Per Case</AttributeID>
+                  <EstimatedCount>80</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Delete Code</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Discontinued</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Brand Sub</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Brand Sub Key</AttributeID>
+                  <EstimatedCount>1071</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brand Sub ID</AttributeID>
+                  <EstimatedCount>1119</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brand</AttributeID>
+                  <EstimatedCount>162</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brewer</AttributeID>
+                  <EstimatedCount>50</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Type</AttributeID>
+                  <EstimatedCount>5</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Class</AttributeID>
+                  <EstimatedCount>29</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>ABV</AttributeID>
+                  <EstimatedCount>62</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brand Sub</AttributeID>
+                  <EstimatedCount>1093</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Date</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Date Key</AttributeID>
+                  <EstimatedCount>7671</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Date Name</AttributeID>
+                  <EstimatedCount>7671</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Calendar Year Week</AttributeID>
+                  <EstimatedCount>1114</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Calendar Year Month</AttributeID>
+                  <EstimatedCount>252</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Calendar Year</AttributeID>
+                  <EstimatedCount>21</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Month Name</AttributeID>
+                  <EstimatedCount>12</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Week Name</AttributeID>
+                  <EstimatedCount>54</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Brewer</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Brewer Key</AttributeID>
+                  <EstimatedCount>73</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brewer</AttributeID>
+                  <EstimatedCount>73</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Brewer ID</AttributeID>
+                  <EstimatedCount>73</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Account</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Account Key</AttributeID>
+                  <EstimatedCount>6208</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Active</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Premise</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Account</AttributeID>
+                  <EstimatedCount>6080</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Delete Code</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Mode</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Mode Key</AttributeID>
+                  <EstimatedCount>5</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mode</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Mode ID</AttributeID>
+                  <EstimatedCount>5</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Class</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Brand</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Area</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Area</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Supervisor</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Supervisor</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Type</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Brewer</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Brand</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Brand Sub</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Product</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>UM</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Brand Sub</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Date Key</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Brewer</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Account</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Account</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Mode</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Class</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Brand</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Area</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Area</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Supervisor</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Supervisor</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Type</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Brewer</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Brand</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Brand Sub</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Product</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>UM</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Brand Sub</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Calendar Year Week</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Brewer</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Account</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Account</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Mode</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>Class</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Dim Brand</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Area</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Area</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Supervisor</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Supervisor</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Type</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Brewer</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Brand</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Brand Sub</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Product</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>UM</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Brand Sub</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Date</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Calendar Year Month</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>Calendar Year Week</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Brewer</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Account</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Account</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Mode</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

@@ -1,0 +1,289 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="5eb4feee-bc7a-4472-a748-ffa32b6e735e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Brand Sub</ID>
+  <Name>Brand Sub</Name>
+  <CreatedTimestamp>0001-01-01T07:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T07:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1726" scrolltop="-2977" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7038" y="11800" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DimBrandSub" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3731" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000930e000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimBrandSub" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1726</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-2977</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T07:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c993c6c2-29d7-46f2-9ffa-4297b2c151ed">
+    <DataSourceViewID>CDC Cube</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="ebf8a3c0-f788-46bd-acb3-3176bdb92f8d">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="a0c03a71-59c1-41f0-8aa7-89b55effb190">
+      <ID>Brand Sub Key</ID>
+      <Name>Brand Sub Key</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>1071</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="78adcda3-939e-4ab8-a705-6bb2dcc65b18">
+          <DataType>SmallInt</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cf43806c-949f-4b75-8849-1ec26ab9868a">
+            <TableID>dbo_DimBrandSub</TableID>
+            <ColumnID>BrandSubKey</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6f74ce73-e9b4-4057-a7f6-0ad3697da4b6">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ad45eb1f-3d01-4c7b-99e1-c5b3f4755ab3">
+          <TableID>dbo_DimBrandSub</TableID>
+          <ColumnID>BrandSub</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="05ef8269-259f-4bed-a162-cfb77dd5ebf9">
+          <AttributeID>Brand Sub ID</AttributeID>
+          <Name>Brand Sub ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d7fb72eb-df33-41d8-a588-c8aba128f7bc">
+          <AttributeID>Brand</AttributeID>
+          <Name>Brand</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f06f664f-4cdd-45c3-98b1-ab2684a99c5e">
+          <AttributeID>Brewer</AttributeID>
+          <Name>Brewer</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4345efeb-bdf9-4542-9186-226f53465351">
+          <AttributeID>Type</AttributeID>
+          <Name>Type</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="572ec614-37ab-444d-9f7a-1110d5293ddc">
+          <AttributeID>Class</AttributeID>
+          <Name>Class</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7730debd-8ad1-47ad-bbfd-1d4fad10d53e">
+          <AttributeID>ABV</AttributeID>
+          <Name>ABV</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c75b68e7-5da2-4b1b-a181-979c9f8863b3">
+          <AttributeID>Brand Sub</AttributeID>
+          <Name>Brand Sub</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="07f447bb-ba52-4851-a9cb-d797e3a8d8bd">
+      <ID>Brand Sub ID</ID>
+      <Name>Brand Sub ID</Name>
+      <EstimatedCount>1119</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="df89bc91-ea71-48ac-a63b-3611e7eae35f">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5495e88c-1467-4507-9722-136be8594a13">
+            <TableID>dbo_DimBrandSub</TableID>
+            <ColumnID>BrandSubID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aa285ba3-abd9-46ec-8d7d-86be7dfc9898">
+      <ID>Brand</ID>
+      <Name>Brand</Name>
+      <EstimatedCount>162</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6bcb766d-e8f4-41b5-9d92-7fa548e64429">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d067e102-3a90-4501-b102-0c9261e3998f">
+            <TableID>dbo_DimBrandSub</TableID>
+            <ColumnID>Brand</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="04925914-249d-4132-bf16-d0173a0ad907">
+      <ID>Brewer</ID>
+      <Name>Brewer</Name>
+      <EstimatedCount>50</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8fdf3e45-3418-46b7-986f-4657fa17895f">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b6545165-e9a9-410a-8301-7db105338787">
+            <TableID>dbo_DimBrandSub</TableID>
+            <ColumnID>Brewer</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="da661b2c-a0c4-4586-8c03-a1a701e8d279">
+      <ID>Type</ID>
+      <Name>Type</Name>
+      <EstimatedCount>5</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e05b8503-0636-4160-abcd-5d3bb8352fa7">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5130c904-aee2-4ab0-a3e6-255f20f52641">
+            <TableID>dbo_DimBrandSub</TableID>
+            <ColumnID>Type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8699ebce-3b53-4522-93cb-3ad009a701dd">
+      <ID>Class</ID>
+      <Name>Class</Name>
+      <EstimatedCount>29</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1487bb39-a99b-4d3a-8028-83fbac307f03">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7b094856-ca6b-4d87-9be9-e5a59b47328f">
+            <TableID>dbo_DimBrandSub</TableID>
+            <ColumnID>Class</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="714393f7-c2fe-4df8-aae5-c45e74b2be2e">
+      <ID>ABV</ID>
+      <Name>ABV</Name>
+      <EstimatedCount>62</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3626b8ce-d486-48a1-a9ad-5c9b6edb4153">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5a522c83-be4a-4347-bb2f-57c97ef2631c">
+            <TableID>dbo_DimBrandSub</TableID>
+            <ColumnID>ABV</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="848a22a5-40b2-45aa-bc2f-32b1306a5189">
+      <ID>Brand Sub</ID>
+      <Name>Brand Sub</Name>
+      <EstimatedCount>1093</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7ab2ad23-0d49-4dfd-ac79-8933ef60c2ab">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="16f68ba5-1499-4229-8bbe-01140bfe93de">
+            <TableID>dbo_DimBrandSub</TableID>
+            <ColumnID>BrandSub</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="31bf132e-16fd-4730-ab66-955284f380b4">
+      <ID>Hierarchy</ID>
+      <Name>Brewer-Brand-Sub</Name>
+      <Levels>
+        <Level dwd:design-time-name="f96d7b41-d051-4bf9-9e93-67106712d6f2">
+          <ID>Brewer</ID>
+          <Name>Brewer</Name>
+          <SourceAttributeID>Brewer</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="697ec2d6-fd4d-4826-9ff6-5cc040beb6b8">
+          <ID>Brand</ID>
+          <Name>Brand</Name>
+          <SourceAttributeID>Brand</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b35fc46a-1a4d-465d-a307-4b5688671c3c">
+          <ID>Brand Sub</ID>
+          <Name>Brand Sub</Name>
+          <SourceAttributeID>Brand Sub</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
