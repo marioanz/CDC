@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="DateYear">
+    <Query>
+      <DataSourceReference>CDCCube</DataSourceReference>
+      <CommandText>WITH MEMBER [Measures].[ParameterCaption] AS [Date].[Year].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Date].[Year].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Date].[Year].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel], [Measures].[Qty]} ON COLUMNS , [Date].[Year].ALLMEMBERS ON ROWS FROM ( SELECT ( [Measures].[Qty] ) ON COLUMNS FROM [CDC])</CommandText>
+      <rd:DesignerState><QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition"><CommandType>MDX</CommandType><Type>Query</Type><QuerySpecification xsi:type="MDXQuerySpecification"><Select><Items><Item><ID xsi:type="Level"><DimensionName>Date</DimensionName><HierarchyName>Year</HierarchyName><HierarchyUniqueName>[Date].[Year]</HierarchyUniqueName><LevelName>Year</LevelName><UniqueName>[Date].[Year].[Year]</UniqueName></ID><ItemCaption>Year</ItemCaption></Item><Item><ID xsi:type="Measure"><MeasureName>ParameterCaption</MeasureName><UniqueName>[Measures].[ParameterCaption]</UniqueName></ID><ItemCaption>ParameterCaption</ItemCaption><FormattedValue>true</FormattedValue></Item><Item><ID xsi:type="Measure"><MeasureName>ParameterValue</MeasureName><UniqueName>[Measures].[ParameterValue]</UniqueName></ID><ItemCaption>ParameterValue</ItemCaption><FormattedValue>true</FormattedValue></Item><Item><ID xsi:type="Measure"><MeasureName>ParameterLevel</MeasureName><UniqueName>[Measures].[ParameterLevel]</UniqueName></ID><ItemCaption>ParameterLevel</ItemCaption><FormattedValue>true</FormattedValue></Item><Item><ID xsi:type="Measure"><MeasureName>Qty</MeasureName><UniqueName>[Measures].[Qty]</UniqueName></ID><ItemCaption>Qty</ItemCaption><FormattedValue>true</FormattedValue></Item></Items></Select><From>CDC</From><Filter><FilterItems /></Filter><Calculations /><Aggregates /><QueryProperties /></QuerySpecification><Query><Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Date].[Year].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Date].[Year].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Date].[Year].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel], [Measures].[Qty]} ON COLUMNS , [Date].[Year].ALLMEMBERS ON ROWS FROM ( SELECT ( [Measures].[Qty] ) ON COLUMNS FROM [CDC])</Statement><ParameterDefinitions /></Query></QueryDefinition></rd:DesignerState>
+      <rd:Hidden>true</rd:Hidden>
+    </Query>
+    <Fields>
+      <Field Name="Year">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Date].[Year].[Year]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ParameterCaption">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterCaption]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ParameterValue">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterValue]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ParameterLevel">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[ParameterLevel]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Qty">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Qty]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ParameterCaptionIndented">
+        <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+    <Filters>
+      <Filter>
+        <FilterExpression>=Fields!Qty.Value</FilterExpression>
+        <Operator>GreaterThanOrEqual</Operator>
+        <FilterValues>
+          <FilterValue DataType="Integer">1000</FilterValue>
+        </FilterValues>
+      </Filter>
+    </Filters>
+  </DataSet>
+</SharedDataSet>

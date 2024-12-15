@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <Description />
+  <DataSet Name="OnPremiseDraft">
+    <Query>
+      <DataSourceReference>CDCCube</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="DateYear">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+        </DataSetParameter>
+        <DataSetParameter Name="DateWeek">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+        </DataSetParameter>
+        <DataSetParameter Name="DateMonth">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>true</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText> SELECT NON EMPTY { [Measures].[Qty This Mth], [Measures].[Qty Last Wk], [Measures].[Qty This Wk], [Measures].[Qty Last Yr], [Measures].[Qty This Yr], [Measures].[Qty Last Mth] } ON COLUMNS, NON EMPTY { ([Product].[ProductTree].[Brand Sub].ALLMEMBERS * [Account].[Account].[Account].ALLMEMBERS * [Account].[Premise].[Premise].ALLMEMBERS * [Supervisor].[Supervisor].[Supervisor].ALLMEMBERS * [Class].[Class].[Class].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@DateWeek, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DateMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DateYear, CONSTRAINED) ) ON COLUMNS FROM [CDC]))) WHERE ( IIF( STRTOSET(@DateYear, CONSTRAINED).Count = 1, STRTOSET(@DateYear, CONSTRAINED), [Date].[Year].currentmember ), IIF( STRTOSET(@DateMonth, CONSTRAINED).Count = 1, STRTOSET(@DateMonth, CONSTRAINED), [Date].[Month].currentmember ), IIF( STRTOSET(@DateWeek, CONSTRAINED).Count = 1, STRTOSET(@DateWeek, CONSTRAINED), [Date].[Week].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+      <rd:DesignerState>
+          <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <QuerySpecification xsi:type="MDXQuerySpecification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Product</DimensionName>
+                      <HierarchyName>ProductTree</HierarchyName>
+                      <HierarchyUniqueName>[Product].[ProductTree]</HierarchyUniqueName>
+                      <LevelName>Brewer</LevelName>
+                      <UniqueName>[Product].[ProductTree].[Brewer]</UniqueName>
+                    </ID>
+                    <ItemCaption>Brewer</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Product</DimensionName>
+                      <HierarchyName>ProductTree</HierarchyName>
+                      <HierarchyUniqueName>[Product].[ProductTree]</HierarchyUniqueName>
+                      <LevelName>Brand</LevelName>
+                      <UniqueName>[Product].[ProductTree].[Brand]</UniqueName>
+                    </ID>
+                    <ItemCaption>Brand</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Product</DimensionName>
+                      <HierarchyName>ProductTree</HierarchyName>
+                      <HierarchyUniqueName>[Product].[ProductTree]</HierarchyUniqueName>
+                      <LevelName>Brand Sub</LevelName>
+                      <UniqueName>[Product].[ProductTree].[Brand Sub]</UniqueName>
+                    </ID>
+                    <ItemCaption>Brand Sub</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Account</DimensionName>
+                      <HierarchyName>Account</HierarchyName>
+                      <HierarchyUniqueName>[Account].[Account]</HierarchyUniqueName>
+                      <LevelName>Account</LevelName>
+                      <UniqueName>[Account].[Account].[Account]</UniqueName>
+                    </ID>
+                    <ItemCaption>Account</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Account</DimensionName>
+                      <HierarchyName>Premise</HierarchyName>
+                      <HierarchyUniqueName>[Account].[Premise]</HierarchyUniqueName>
+                      <LevelName>Premise</LevelName>
+                      <UniqueName>[Account].[Premise].[Premise]</UniqueName>
+                    </ID>
+                    <ItemCaption>Premise</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Supervisor</DimensionName>
+                      <HierarchyName>Supervisor</HierarchyName>
+                      <HierarchyUniqueName>[Supervisor].[Supervisor]</HierarchyUniqueName>
+                      <LevelName>Supervisor</LevelName>
+                      <UniqueName>[Supervisor].[Supervisor].[Supervisor]</UniqueName>
+                    </ID>
+                    <ItemCaption>Supervisor</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Class</DimensionName>
+                      <HierarchyName>Class</HierarchyName>
+                      <HierarchyUniqueName>[Class].[Class]</HierarchyUniqueName>
+                      <LevelName>Class</LevelName>
+                      <UniqueName>[Class].[Class].[Class]</UniqueName>
+                    </ID>
+                    <ItemCaption>Class</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Qty This Wk</MeasureName>
+                      <UniqueName>[Measures].[Qty This Wk]</UniqueName>
+                    </ID>
+                    <ItemCaption>Qty This Wk</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                    <DisplayFolder>Quantities</DisplayFolder>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Qty Last Wk</MeasureName>
+                      <UniqueName>[Measures].[Qty Last Wk]</UniqueName>
+                    </ID>
+                    <ItemCaption>Qty Last Wk</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                    <DisplayFolder>Quantities</DisplayFolder>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Qty This Mth</MeasureName>
+                      <UniqueName>[Measures].[Qty This Mth]</UniqueName>
+                    </ID>
+                    <ItemCaption>Qty This Mth</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                    <DisplayFolder>Quantities</DisplayFolder>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Qty Last Mth</MeasureName>
+                      <UniqueName>[Measures].[Qty Last Mth]</UniqueName>
+                    </ID>
+                    <ItemCaption>Qty Last Mth</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                    <DisplayFolder>Quantities</DisplayFolder>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Qty This Yr</MeasureName>
+                      <UniqueName>[Measures].[Qty This Yr]</UniqueName>
+                    </ID>
+                    <ItemCaption>Qty This Yr</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                    <DisplayFolder>Quantities</DisplayFolder>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>Qty Last Yr</MeasureName>
+                      <UniqueName>[Measures].[Qty Last Yr]</UniqueName>
+                    </ID>
+                    <ItemCaption>Qty Last Yr</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                    <DisplayFolder>Quantities</DisplayFolder>
+                  </Item>
+                </Items>
+              </Select>
+              <From>CDC</From>
+              <Filter>
+                <FilterItems>
+                  <FilterItem>
+                    <HierarchyUniqueName>[Date].[Year]</HierarchyUniqueName>
+                    <Condition xsi:type="EqualTo">
+                      <Members />
+                      <Parametrized>true</Parametrized>
+                    </Condition>
+                  </FilterItem>
+                  <FilterItem>
+                    <HierarchyUniqueName>[Date].[Month]</HierarchyUniqueName>
+                    <Condition xsi:type="EqualTo">
+                      <Members />
+                      <Parametrized>true</Parametrized>
+                    </Condition>
+                  </FilterItem>
+                  <FilterItem>
+                    <HierarchyUniqueName>[Date].[Week]</HierarchyUniqueName>
+                    <Condition xsi:type="EqualTo">
+                      <Members />
+                      <Parametrized>true</Parametrized>
+                    </Condition>
+                  </FilterItem>
+                </FilterItems>
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement> SELECT NON EMPTY { [Measures].[Qty This Mth], [Measures].[Qty Last Wk], [Measures].[Qty This Wk], [Measures].[Qty Last Yr], [Measures].[Qty This Yr], [Measures].[Qty Last Mth] } ON COLUMNS, NON EMPTY { ([Product].[ProductTree].[Brand Sub].ALLMEMBERS * [Account].[Account].[Account].ALLMEMBERS * [Account].[Premise].[Premise].ALLMEMBERS * [Supervisor].[Supervisor].[Supervisor].ALLMEMBERS * [Class].[Class].[Class].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( STRTOSET(@DateWeek, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DateMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DateYear, CONSTRAINED) ) ON COLUMNS FROM [CDC]))) WHERE ( IIF( STRTOSET(@DateYear, CONSTRAINED).Count = 1, STRTOSET(@DateYear, CONSTRAINED), [Date].[Year].currentmember ), IIF( STRTOSET(@DateMonth, CONSTRAINED).Count = 1, STRTOSET(@DateMonth, CONSTRAINED), [Date].[Month].currentmember ), IIF( STRTOSET(@DateWeek, CONSTRAINED).Count = 1, STRTOSET(@DateWeek, CONSTRAINED), [Date].[Week].currentmember ) ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>DateYear</Name>
+                  <DefaultValues />
+                  <Caption>Year</Caption>
+                  <HierarchyUniqueName>[Date].[Year]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Date].[Year].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Date].[Year].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Date].[Year].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Date].[Year].ALLMEMBERS ON ROWS FROM [CDC]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>DateMonth</Name>
+                  <DefaultValues />
+                  <Caption>Month</Caption>
+                  <HierarchyUniqueName>[Date].[Month]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Date].[Month].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Date].[Month].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Date].[Month].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Date].[Month].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DateYear, CONSTRAINED) ) ON COLUMNS FROM [CDC])</Statement>
+                    <ParameterizedStatement>
+                      <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Date].[Month].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Date].[Month].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Date].[Month].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Date].[Month].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DateYear, CONSTRAINED) ) ON COLUMNS FROM [CDC])</Statement>
+                      <ReferencedParameters>
+                        <ReferencedParameter>
+                          <Name>DateYear</Name>
+                        </ReferencedParameter>
+                      </ReferencedParameters>
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>DateWeek</Name>
+                  <DefaultValues />
+                  <Caption>Week</Caption>
+                  <HierarchyUniqueName>[Date].[Week]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Date].[Week].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Date].[Week].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Date].[Week].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Date].[Week].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DateMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DateYear, CONSTRAINED) ) ON COLUMNS FROM [CDC]))</Statement>
+                    <ParameterizedStatement>
+                      <Statement>WITH MEMBER [Measures].[ParameterCaption] AS [Date].[Week].CURRENTMEMBER.MEMBER_CAPTION MEMBER [Measures].[ParameterValue] AS [Date].[Week].CURRENTMEMBER.UNIQUENAME MEMBER [Measures].[ParameterLevel] AS [Date].[Week].CURRENTMEMBER.LEVEL.ORDINAL SELECT {[Measures].[ParameterCaption], [Measures].[ParameterValue], [Measures].[ParameterLevel]} ON COLUMNS , [Date].[Week].ALLMEMBERS ON ROWS FROM ( SELECT ( STRTOSET(@DateMonth, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( STRTOSET(@DateYear, CONSTRAINED) ) ON COLUMNS FROM [CDC]))</Statement>
+                      <ReferencedParameters>
+                        <ReferencedParameter>
+                          <Name>DateYear</Name>
+                        </ReferencedParameter>
+                        <ReferencedParameter>
+                          <Name>DateMonth</Name>
+                        </ReferencedParameter>
+                      </ReferencedParameters>
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                </ParameterDefinition>
+              </ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Brewer">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Product].[ProductTree].[Brewer]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Brand">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Product].[ProductTree].[Brand]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Brand_Sub">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Product].[ProductTree].[Brand Sub]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Account">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Account].[Account].[Account]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Premise">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Account].[Premise].[Premise]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Supervisor">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Supervisor].[Supervisor].[Supervisor]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Class">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[Class].[Class].[Class]" /&gt;</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Qty_This_Wk">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Qty This Wk]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Qty_Last_Wk">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Qty Last Wk]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Qty_This_Mth">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Qty This Mth]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Qty_Last_Mth">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Qty Last Mth]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Qty_This_Yr">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Qty This Yr]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Qty_Last_Yr">
+        <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[Qty Last Yr]" /&gt;</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
