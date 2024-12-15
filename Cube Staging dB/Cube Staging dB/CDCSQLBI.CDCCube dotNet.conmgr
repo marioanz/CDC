@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CDCSQLBI CDCCube dotNet"
+  DTS:DTSID="{CD49C2D5-0F76-49CC-89EB-42D2C6A8B08E}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=SQL2012;Initial Catalog=CDCCube;Integrated Security=True;Application Name=SSIS-Account-{51DC3AFD-EEFC-4272-8E5F-CE46ED5AE5AE}QORTEXCDCSQLBI.CDCCube;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

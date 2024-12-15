@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="SQL2012.CDCCube"
+  DTS:DTSID="{88DA2D80-5459-413C-9C6B-4AA2C2CF8B99}"
+  DTS:CreationName="MSOLAP100">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=SQL2012;User ID=Administrator;Initial Catalog=CDCCube;Provider=MSOLAP.5;Persist Security Info=True;Impersonation Level=Impersonate;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

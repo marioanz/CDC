@@ -1,0 +1,5 @@
+ModeID	Mode
+0	SALES                         
+1	SALES                         
+2	RETURNS                       
+3	BREAKAGE                      

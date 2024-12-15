@@ -1,0 +1,3289 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/14/2005 8:25:56 AM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="JOYSRV-01"
+  DTS:CreatorName="JOYSRV-01\Joy Mundy"
+  DTS:DTSID="{58EB6F96-7665-42B8-83DE-30079122F926}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.5058.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Date"
+  DTS:PackageType="5"
+  DTS:VersionBuild="384"
+  DTS:VersionGUID="{C058E246-928E-43C4-A40B-D062E671ECEC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Date Flat File]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Excel Created Date Table"
+      DTS:DTSID="{4F789331-275D-40BF-AF67-B599DBD3C759}"
+      DTS:ObjectName="Date Flat File">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\WAREHOUSE\SSISTemp\DIMDATE.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{BD42F84C-FFD0-4029-820D-47A2FEF785AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FullDate"
+              DTS:DTSID="{C94C20CF-630A-4558-A18E-9E380E89968D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateName"
+              DTS:DTSID="{9C88E2E6-55CE-4B7F-9314-14D7EC5662CA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayOfWeek"
+              DTS:DTSID="{972809CC-B3C5-4AAC-8574-B8AEEF4F03B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayNameOfWeek"
+              DTS:DTSID="{3C1E204A-6D0A-470F-B226-DAFE4C3AF391}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayOfMonth"
+              DTS:DTSID="{E4BE4156-84DF-49D8-80D6-C72F23F1D658}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayOfYear"
+              DTS:DTSID="{A7B5F166-C3D0-418B-800D-E671EF2109D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WeekdayWeekend"
+              DTS:DTSID="{89BAEC15-5A77-4D44-B3B5-77A66CE557A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WeekOfYear"
+              DTS:DTSID="{A182F3FC-58A2-4B59-845E-97C4D8C9695F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MonthName"
+              DTS:DTSID="{F876928D-6FAF-4EE6-A5B4-D7CB697FC72E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MonthOfYear"
+              DTS:DTSID="{28CB83D0-809C-489F-A35E-CBF9825985DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IsLastDayOfMonth"
+              DTS:DTSID="{97B35499-FA35-41DE-BAF7-A29853EA3419}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarQuarter"
+              DTS:DTSID="{1A47619D-67B7-4E28-9749-D91A5D5D0EAE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarYear"
+              DTS:DTSID="{19C1E48B-008C-409F-A0B2-A7A90FB171B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarYearWeek"
+              DTS:DTSID="{13123E67-70EC-4823-B38C-41B8E481416C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarYearMonth"
+              DTS:DTSID="{17F59413-3241-4A0F-9E3F-79B9B337D2AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CalendarYearQtr"
+              DTS:DTSID="{E98ABDE2-3ACF-4112-AB7F-538EC85719F3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Configurations>
+    <DTS:Configuration
+      DTS:ConfigurationString="AuditKey"
+      DTS:ConfigurationVariable="\Package.Variables[User::ParentAuditKey].Properties[Value]"
+      DTS:CreationName=""
+      DTS:DTSID="{F269579A-16CE-4F53-9C48-69817DA8C466}"
+      DTS:ObjectName="ParentAuditKey" />
+    <DTS:Configuration
+      DTS:ConfigurationString="CDCCubeSSIS"
+      DTS:ConfigurationType="5"
+      DTS:CreationName=""
+      DTS:DTSID="{FEF06381-E439-467A-A9E9-5C98141610DA}"
+      DTS:ObjectName="EV Indirect Config" />
+  </DTS:Configurations>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6447E2E9-7503-4CA4-A1A9-D2E27A52EEC6}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="AuditKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{596CF1A0-2E8D-4161-9014-C78111932558}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ErrorPath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\SSISTemp\ErrorFiles\DimDateErr.raw</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9BDD9125-8A68-4103-9696-804242B0FA19}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExtractStartDate">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/2012</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8FC4C252-8553-450B-AD6F-D4402FE2D8FF}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ExtractStopDate">
+      <DTS:VariableValue
+        DTS:DataType="7">12/31/2012</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AFCC05C3-F213-4F78-B102-1480EE630E85}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="ParentAuditKey">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D56E808E-AEA6-451E-BD72-7A581155FA34}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PKName">
+      <DTS:VariableValue
+        DTS:DataType="8">DateKey</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{148739A8-ABBC-49DA-9B72-51A99381285D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RC_Error">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2C1107DB-CA14-4DAC-9812-CDB6B87B4313}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RC_Normal">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1ED66CB5-531E-4DB8-B743-BE610162C87A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RC_Xtrct">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{69EE89AF-3CF7-4173-B742-59AC175EB105}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BC1D75F3-F802-415C-9112-69AE4B20ADDD}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="TableName">
+      <DTS:VariableValue
+        DTS:DataType="8">DimDate</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="1">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">4,7,OnError,13,OnInformation,14,OnPostValidate,9,OnWarning</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnInformation"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnPostValidate"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnWarning"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+  </DTS:LoggingOptions>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Get AuditKey"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1BE33F0F-B34E-4B9C-BFC6-411D48F4BABB}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get AuditKey"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CD49C2D5-0F76-49CC-89EB-42D2C6A8B08E}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="INSERT INTO [DimAudit]&#xA;           (ParentAuditKey&#xA;           ,[TableName]&#xA;           ,[PkgName]&#xA;           ,[PkgGUID]&#xA;           ,[PkgVersionGUID]&#xA;           ,[PkgVersionMajor]&#xA;           ,[PkgVersionMinor]&#xA;           ,[ExecStartDT]&#xA;           ,[ExecStopDT]&#xA;           ,[ExecutionInstanceGUID]&#xA;           ,[ExtractRowCnt]&#xA;           ,[InsertRowCnt]&#xA;           ,[UpdateRowCnt]&#xA;           ,[ErrorRowCnt]&#xA;           ,[TableInitialRowCnt]&#xA;           ,[TableFinalRowCnt]&#xA;           ,[TableMaxSurrogateKey]&#xA;           ,[SuccessfulProcessingInd])&#xA;     VALUES&#xA;           (@ParentAuditKey&#xA;           ,@TableName&#xA;           ,@PkgName&#xA;           ,@PkgGUID&#xA;           ,@PkgVersionGUID&#xA;           ,@PkgVersionMajor&#xA;           ,@PkgVersionMinor&#xA;           ,@StartTime&#xA;           ,NULL&#xA;           ,@PkgExecGUID&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,NULL&#xA;           ,'N')&#xA;SELECT CAST(SCOPE_IDENTITY() AS INT) AS AuditKey&#xA;GO"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::AuditKey" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="StartTime"
+            SQLTask:DtsVariableName="System::StartTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="6"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgName"
+            SQLTask:DtsVariableName="System::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="16"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgGUID"
+            SQLTask:DtsVariableName="System::PackageID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="9"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgVersionGUID"
+            SQLTask:DtsVariableName="System::VersionGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="9"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgVersionMajor"
+            SQLTask:DtsVariableName="System::VersionMajor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgVersionMinor"
+            SQLTask:DtsVariableName="System::VersionMinor"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="PkgExecGUID"
+            SQLTask:DtsVariableName="System::ExecutionInstanceGUID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="9"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="TableName"
+            SQLTask:DtsVariableName="User::TableName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="16"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="ParentAuditKey"
+            SQLTask:DtsVariableName="User::ParentAuditKey"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get Dates"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{01E6498C-DB9A-4700-8B80-00A153324911}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Dates"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v9; (C) 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          engineThreads="5"
+          version="1">
+          <components>
+            <component
+              refId="Package\Get Dates\Count Errors"
+              componentClassID="{E2697D8C-70DA-42B2-8208-A19CE3A9FE41}"
+              contactInfo="Row Count;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts the rows in a dataset."
+              name="Count Errors">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RC_Error</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Get Dates\Count Errors.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Dates\Count Errors.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Get Dates\Count Errors.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Dates\Data Conversion"
+              componentClassID="{62B1106C-7DB8-4EC8-ADD6-4C664DFFC54A}"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[DateKeyIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DateKeyIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DateKeyIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[FullDateIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FullDateIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[FullDateIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[DateNameIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DateNameIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DateNameIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[DayOfWeekIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DayOfWeekIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfWeekIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[DayNameOfWeekIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DayNameOfWeekIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayNameOfWeekIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[DayOfMonthIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DayOfMonthIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfMonthIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[DayOfYearIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DayOfYearIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfYearIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[WeekdayWeekendIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WeekdayWeekendIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[WeekdayWeekendIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[WeekOfYearIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WeekOfYearIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[WeekOfYearIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[MonthNameIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MonthNameIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[MonthNameIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[MonthOfYearIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MonthOfYearIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[MonthOfYearIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[CalendarQuarterIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CalendarQuarterIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarQuarterIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[CalendarYearIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CalendarYearIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[CalendarYearMonthIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CalendarYearMonthIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearMonthIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[CalendarYearQtrIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CalendarYearQtrIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearQtrIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[InsertAuditKey]"
+                      cachedDataType="i4"
+                      cachedName="InsertAuditKey"
+                      lineageId="Package\Get Dates\Row Metadata.Outputs[Derived Column Output].Columns[InsertAuditKey]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[UpdateAuditKey]"
+                      cachedDataType="i4"
+                      cachedName="UpdateAuditKey"
+                      lineageId="Package\Get Dates\Row Metadata.Outputs[Derived Column Output].Columns[UpdateAuditKey]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[CalendarYearWeekIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CalendarYearWeekIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearWeekIN]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input].Columns[IsLastDayOfMonthIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="IsLastDayOfMonthIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[IsLastDayOfMonthIN]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DateKey]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DateKeyIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[FullDate]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[FullDate]"
+                      name="FullDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[FullDateIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DateName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DateName]"
+                      name="DateName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DateNameIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfWeek]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfWeek]"
+                      name="DayOfWeek"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfWeekIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayNameOfWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayNameOfWeek]"
+                      name="DayNameOfWeek"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayNameOfWeekIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfMonth]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfMonth]"
+                      name="DayOfMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfMonthIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfYear]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfYear]"
+                      name="DayOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfYearIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[WeekdayWeekend]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[WeekdayWeekend]"
+                      name="WeekdayWeekend"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[WeekdayWeekendIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[WeekOfYear]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[WeekOfYear]"
+                      name="WeekOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[WeekOfYearIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[MonthName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[MonthName]"
+                      name="MonthName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[MonthNameIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[MonthOfYear]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[MonthOfYear]"
+                      name="MonthOfYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[MonthOfYearIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarQuarter]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarQuarter]"
+                      name="CalendarQuarter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarQuarterIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYear]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYear]"
+                      name="CalendarYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearMonth]"
+                      name="CalendarYearMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearMonthIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearQtr]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearQtr]"
+                      name="CalendarYearQtr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearQtrIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="9"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearWeek]"
+                      name="CalendarYearWeek"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearWeekIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[InsertAuditKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[InsertAuditKey]"
+                      name="InsertAuditKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Row Metadata.Outputs[Derived Column Output].Columns[InsertAuditKey]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[UpdateAuditKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[UpdateAuditKey]"
+                      name="UpdateAuditKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Row Metadata.Outputs[Derived Column Output].Columns[UpdateAuditKey]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[IsLastDayOfMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="1"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[IsLastDayOfMonth]"
+                      name="IsLastDayOfMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[IsLastDayOfMonthIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Dates\Dump NULL"
+              componentClassID="{7F88F654-4E20-4D14-84F4-AF9C925D3087}"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Dump NULL"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Get Dates\Dump NULL.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Dates\Dump NULL.Inputs[Conditional Split Input].Columns[DateKeyIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DateKeyIN"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DateKeyIN]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Dates\Dump NULL.Outputs[NULL Rows]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="NULL Rows"
+                  synchronousInputId="Package\Get Dates\Dump NULL.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DateKeyIN]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(DateKeyIN)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Get Dates\Dump NULL.Outputs[NOT NULL]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="NOT NULL"
+                  synchronousInputId="Package\Get Dates\Dump NULL.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Get Dates\Dump NULL.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Get Dates\Dump NULL.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Dates\Dump NULL.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Dump NULL.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Dates\Dump NULL.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Dump NULL.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Dates\Error rows to raw file"
+              componentClassID="{04762BB6-892F-4EE6-AD46-9CEB0A7EC7A2}"
+              contactInfo="Loads raw data into a file.;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads raw data into a file."
+              name="Error rows to raw file"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the file."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Output file name"
+                  name="FileName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.NonValidatingFileNameEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">E:\WAREHOUSE\SSISTemp\ErrorFiles\DimDateErr.raw</property>
+                <property
+                  dataType="System.Null"
+                  description="Name of the variable that contains the file name"
+                  name="FileNameVariable" />
+                <property
+                  dataType="System.Int32"
+                  description="Indicates what option is used to write to the file."
+                  name="WriteOption"
+                  typeConverter="WriteOption">0</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input]"
+                  hasSideEffects="true"
+                  name="Raw File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\Get Dates\Row by Row.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\Get Dates\Row by Row.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[DateKey]"
+                      cachedDataType="ui4"
+                      cachedName="DateKey"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[FullDate]"
+                      cachedDataType="date"
+                      cachedName="FullDate"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[FullDate]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[DateName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="DateName"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DateName]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[DayOfWeek]"
+                      cachedDataType="ui2"
+                      cachedName="DayOfWeek"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfWeek]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[DayNameOfWeek]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="DayNameOfWeek"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayNameOfWeek]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[DayOfMonth]"
+                      cachedDataType="ui2"
+                      cachedName="DayOfMonth"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfMonth]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[DayOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="DayOfYear"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[WeekdayWeekend]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="WeekdayWeekend"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[WeekdayWeekend]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[WeekOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="WeekOfYear"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[WeekOfYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[MonthName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="MonthName"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[MonthName]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[MonthOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="MonthOfYear"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[MonthOfYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[IsLastDayOfMonth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="IsLastDayOfMonth"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[IsLastDayOfMonth]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[CalendarQuarter]"
+                      cachedDataType="ui1"
+                      cachedName="CalendarQuarter"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarQuarter]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[CalendarYear]"
+                      cachedDataType="ui4"
+                      cachedName="CalendarYear"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[CalendarYearMonth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="CalendarYearMonth"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearMonth]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[CalendarYearQtr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="CalendarYearQtr"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearQtr]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[InsertAuditKey]"
+                      cachedDataType="i4"
+                      cachedName="InsertAuditKey"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[InsertAuditKey]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input].Columns[UpdateAuditKey]"
+                      cachedDataType="i4"
+                      cachedName="UpdateAuditKey"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[UpdateAuditKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Get Dates\Flat File Text"
+              componentClassID="{D23FD76B-F51D-420F-BBCB-19CBF6AC1AB4}"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Text"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Dates\Flat File Text.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Date Flat File]"
+                  connectionManagerRefId="Package.ConnectionManagers[Date Flat File]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DateKeyIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DateKey]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DateKeyIN]"
+                      name="DateKeyIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[FullDateIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[FullDate]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[FullDateIN]"
+                      name="FullDateIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DateNameIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DateName]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DateNameIN]"
+                      name="DateNameIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfWeekIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DayOfWeek]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfWeekIN]"
+                      name="DayOfWeekIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayNameOfWeekIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DayNameOfWeek]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayNameOfWeekIN]"
+                      name="DayNameOfWeekIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfMonthIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DayOfMonth]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfMonthIN]"
+                      name="DayOfMonthIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfYearIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DayOfYear]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[DayOfYearIN]"
+                      name="DayOfYearIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[WeekdayWeekendIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[WeekdayWeekend]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[WeekdayWeekendIN]"
+                      name="WeekdayWeekendIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[WeekOfYearIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[WeekOfYear]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[WeekOfYearIN]"
+                      name="WeekOfYearIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[MonthNameIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[MonthName]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[MonthNameIN]"
+                      name="MonthNameIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[MonthOfYearIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[MonthOfYear]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[MonthOfYearIN]"
+                      name="MonthOfYearIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[IsLastDayOfMonthIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[IsLastDayOfMonth]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[IsLastDayOfMonthIN]"
+                      name="IsLastDayOfMonthIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarQuarterIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[CalendarQuarter]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarQuarterIN]"
+                      name="CalendarQuarterIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[CalendarYear]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearIN]"
+                      name="CalendarYearIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearMonthIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[CalendarYearMonth]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearMonthIN]"
+                      name="CalendarYearMonthIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearQtrIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[CalendarYearQtr]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearQtrIN]"
+                      name="CalendarYearQtrIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearWeekIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[CalendarYearWeek]"
+                      length="50"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].Columns[CalendarYearWeekIN]"
+                      name="CalendarYearWeekIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DateKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[FullDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FullDate" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DateName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DateName" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DayOfWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DayNameOfWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DayOfMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DayOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[DayOfYear]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DayOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[WeekdayWeekend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WeekdayWeekend" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[WeekOfYear]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WeekOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[MonthName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[MonthOfYear]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MonthOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[IsLastDayOfMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IsLastDayOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[CalendarQuarter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CalendarQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[CalendarYear]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CalendarYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[CalendarYearMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CalendarYearMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[CalendarYearQtr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CalendarYearQtr" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output].ExternalColumns[CalendarYearWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CalendarYearWeek" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Dates\Load DimDate"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load DimDate"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,ROWS_PER_BATCH = 1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">1000</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Dates\Load DimDate.Connections[OleDbConnection]"
+                  connectionManagerID="{9488CFCE-6879-4E54-BE96-ED5747EC3FC0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CDCSQLBI CDCCube]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="ui4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[FullDate]"
+                      cachedDataType="date"
+                      cachedName="FullDate"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[FullDate]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[FullDate]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[DateName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="DateName"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DateName]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DateName]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[DayOfWeek]"
+                      cachedDataType="ui2"
+                      cachedName="DayOfWeek"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfWeek]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[DayNameOfWeek]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="DayNameOfWeek"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DayNameOfWeek]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayNameOfWeek]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[DayOfMonth]"
+                      cachedDataType="ui2"
+                      cachedName="DayOfMonth"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DayOfMonth]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfMonth]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[DayOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="DayOfYear"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DayOfYear]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[WeekdayWeekend]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="WeekdayWeekend"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[WeekdayWeekend]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[WeekdayWeekend]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[WeekOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="WeekOfYear"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[WeekOfYear]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[WeekOfYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[MonthName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="MonthName"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[MonthName]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[MonthOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="MonthOfYear"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[MonthOfYear]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[MonthOfYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[IsLastDayOfMonth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="IsLastDayOfMonth"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[IsLastDayOfMonth]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[IsLastDayOfMonth]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[CalendarQuarter]"
+                      cachedDataType="ui1"
+                      cachedName="CalendarQuarter"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[CalendarQuarter]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarQuarter]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[CalendarYear]"
+                      cachedDataType="ui4"
+                      cachedName="CalendarYear"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYear]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[CalendarYearMonth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="CalendarYearMonth"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearMonth]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearMonth]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[CalendarYearQtr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="CalendarYearQtr"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearQtr]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearQtr]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[InsertAuditKey]"
+                      cachedDataType="i4"
+                      cachedName="InsertAuditKey"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[InsertAuditKey]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[InsertAuditKey]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[UpdateAuditKey]"
+                      cachedDataType="i4"
+                      cachedName="UpdateAuditKey"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[UpdateAuditKey]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[UpdateAuditKey]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].Columns[CalendarYearWeek]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="CalendarYearWeek"
+                      externalMetadataColumnId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearWeek]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearWeek]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[InsertAuditKey]"
+                      dataType="i4"
+                      name="InsertAuditKey" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[UpdateAuditKey]"
+                      dataType="i4"
+                      name="UpdateAuditKey" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[FullDate]"
+                      dataType="dbDate"
+                      name="FullDate" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DateName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="DateName" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
+                      dataType="ui1"
+                      name="DayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DayNameOfWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="DayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DayOfMonth]"
+                      dataType="ui1"
+                      name="DayOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[DayOfYear]"
+                      dataType="i2"
+                      name="DayOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[WeekdayWeekend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="WeekdayWeekend" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[WeekOfYear]"
+                      dataType="ui1"
+                      name="WeekOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="MonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[MonthOfYear]"
+                      dataType="ui1"
+                      name="MonthOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[IsLastDayOfMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="IsLastDayOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[CalendarQuarter]"
+                      dataType="ui1"
+                      name="CalendarQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYear]"
+                      dataType="i2"
+                      name="CalendarYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CalendarYearMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearQtr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CalendarYearQtr" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CalendarYearWeek" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Dates\Load DimDate.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Dates\Load DimDate.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Load DimDate.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Dates\Load DimDate.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Load DimDate.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Dates\Row by Row"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              localeId="1033"
+              name="Row by Row"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destinaton. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Get Dates\Row by Row.Connections[OleDbConnection]"
+                  connectionManagerID="{9488CFCE-6879-4E54-BE96-ED5747EC3FC0}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CDCSQLBI CDCCube]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[InsertAuditKey]"
+                      cachedDataType="i4"
+                      cachedName="InsertAuditKey"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[InsertAuditKey]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[InsertAuditKey]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[UpdateAuditKey]"
+                      cachedDataType="i4"
+                      cachedName="UpdateAuditKey"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[UpdateAuditKey]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[UpdateAuditKey]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="ui4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[FullDate]"
+                      cachedDataType="date"
+                      cachedName="FullDate"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[FullDate]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[FullDate]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[DateName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="DateName"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DateName]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DateName]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[DayOfWeek]"
+                      cachedDataType="ui2"
+                      cachedName="DayOfWeek"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfWeek]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[DayNameOfWeek]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="DayNameOfWeek"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DayNameOfWeek]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayNameOfWeek]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[DayOfMonth]"
+                      cachedDataType="ui2"
+                      cachedName="DayOfMonth"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DayOfMonth]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfMonth]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[DayOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="DayOfYear"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DayOfYear]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[DayOfYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[WeekdayWeekend]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="WeekdayWeekend"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[WeekdayWeekend]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[WeekdayWeekend]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[WeekOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="WeekOfYear"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[WeekOfYear]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[WeekOfYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[MonthName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="MonthName"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[MonthName]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[MonthOfYear]"
+                      cachedDataType="ui2"
+                      cachedName="MonthOfYear"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[MonthOfYear]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[MonthOfYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[IsLastDayOfMonth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="IsLastDayOfMonth"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[IsLastDayOfMonth]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[IsLastDayOfMonth]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[CalendarQuarter]"
+                      cachedDataType="ui1"
+                      cachedName="CalendarQuarter"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[CalendarQuarter]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarQuarter]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[CalendarYear]"
+                      cachedDataType="ui4"
+                      cachedName="CalendarYear"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYear]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYear]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[CalendarYearMonth]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="CalendarYearMonth"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearMonth]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearMonth]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[CalendarYearQtr]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="CalendarYearQtr"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearQtr]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearQtr]" />
+                    <inputColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].Columns[CalendarYearWeek]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="9"
+                      cachedName="CalendarYearWeek"
+                      externalMetadataColumnId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearWeek]"
+                      lineageId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output].Columns[CalendarYearWeek]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[InsertAuditKey]"
+                      dataType="i4"
+                      name="InsertAuditKey" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[UpdateAuditKey]"
+                      dataType="i4"
+                      name="UpdateAuditKey" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[FullDate]"
+                      dataType="dbDate"
+                      name="FullDate" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DateName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="11"
+                      name="DateName" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DayOfWeek]"
+                      dataType="ui1"
+                      name="DayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DayNameOfWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="DayNameOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DayOfMonth]"
+                      dataType="ui1"
+                      name="DayOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[DayOfYear]"
+                      dataType="i2"
+                      name="DayOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[WeekdayWeekend]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="WeekdayWeekend" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[WeekOfYear]"
+                      dataType="ui1"
+                      name="WeekOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[MonthName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="MonthName" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[MonthOfYear]"
+                      dataType="ui1"
+                      name="MonthOfYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[IsLastDayOfMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="IsLastDayOfMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[CalendarQuarter]"
+                      dataType="ui1"
+                      name="CalendarQuarter" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYear]"
+                      dataType="i2"
+                      name="CalendarYear" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CalendarYearMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearQtr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CalendarYearQtr" />
+                    <externalMetadataColumn
+                      refId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input].ExternalColumns[CalendarYearWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="CalendarYearWeek" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Dates\Row by Row.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Dates\Row by Row.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Row by Row.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Dates\Row by Row.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Row by Row.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Dates\Row Count"
+              componentClassID="{E2697D8C-70DA-42B2-8208-A19CE3A9FE41}"
+              contactInfo="Row Count;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts the rows in a dataset."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RC_Xtrct</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Get Dates\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Dates\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Get Dates\Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Get Dates\Row Metadata"
+              componentClassID="{49928E82-9C4E-49F0-AABE-3812B82707EC}"
+              contactInfo="Derived Column;Microsoft Corporation;Microsoft SqlServer v9; (C) 2005 Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Updates column values using expressions"
+              name="Row Metadata"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Get Dates\Row Metadata.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Get Dates\Row Metadata.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Get Dates\Row Metadata.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Dates\Row Metadata.Outputs[Derived Column Output].Columns[InsertAuditKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Row Metadata.Outputs[Derived Column Output].Columns[InsertAuditKey]"
+                      name="InsertAuditKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[AuditKey]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@AuditKey</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Get Dates\Row Metadata.Outputs[Derived Column Output].Columns[UpdateAuditKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Get Dates\Row Metadata.Outputs[Derived Column Output].Columns[UpdateAuditKey]"
+                      name="UpdateAuditKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[AuditKey]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@AuditKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Get Dates\Row Metadata.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Get Dates\Row Metadata.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Get Dates\Row Metadata.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Row Metadata.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Get Dates\Row Metadata.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Get Dates\Row Metadata.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Get Dates.Paths[Data Conversion Output]"
+              endId="Package\Get Dates\Row Count.Inputs[Row Count Input 1]"
+              name="Data Conversion Output"
+              startId="Package\Get Dates\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Get Dates.Paths[Derived Column Output]"
+              endId="Package\Get Dates\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Get Dates\Row Metadata.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Get Dates.Paths[Flat File Source Output]"
+              endId="Package\Get Dates\Dump NULL.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\Get Dates\Flat File Text.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Get Dates.Paths[NOT NULL]"
+              endId="Package\Get Dates\Row Metadata.Inputs[Derived Column Input]"
+              name="NOT NULL"
+              startId="Package\Get Dates\Dump NULL.Outputs[NOT NULL]" />
+            <path
+              refId="Package\Get Dates.Paths[OLE DB Destination Error Output]"
+              endId="Package\Get Dates\Count Errors.Inputs[Row Count Input 1]"
+              name="OLE DB Destination Error Output"
+              startId="Package\Get Dates\Row by Row.Outputs[OLE DB Destination Error Output]" />
+            <path
+              refId="Package\Get Dates.Paths[OLE DB Destination Error Output1]"
+              endId="Package\Get Dates\Row by Row.Inputs[OLE DB Destination Input]"
+              name="OLE DB Destination Error Output"
+              startId="Package\Get Dates\Load DimDate.Outputs[OLE DB Destination Error Output]" />
+            <path
+              refId="Package\Get Dates.Paths[Row Count Output 1]"
+              endId="Package\Get Dates\Load DimDate.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\Get Dates\Row Count.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Get Dates.Paths[Row Count Output 11]"
+              endId="Package\Get Dates\Error rows to raw file.Inputs[Raw File Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\Get Dates\Count Errors.Outputs[Row Count Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Post RowCnt"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{EEDB105A-5906-45C4-8B0E-99E81B9E85D9}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Post RowCnt"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"SELECT COUNT(*) AS RowCnt FROM "+ @TableName</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{9488CFCE-6879-4E54-BE96-ED5747EC3FC0}"
+          SQLTask:SqlStatementSource="SELECT COUNT(*) AS RowCnt FROM DimDate"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::RowCount" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Pre-delete rows"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{F7F98EE9-99DC-4650-8078-5CC3A43720CE}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Pre-delete rows"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server v9; © 2004 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"DELETE FROM  " + @TableName + " WHERE " + @PKName + " &gt;= 0"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{9488CFCE-6879-4E54-BE96-ED5747EC3FC0}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="DELETE FROM  DimDate WHERE DateKey &gt;= 0" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Prior RowCnt"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D33102BA-8EC8-48AA-AF84-C766D2DF2440}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Prior RowCnt"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="SqlStatementSource">"SELECT COUNT(*) AS RowCnt FROM " + @TableName</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{9488CFCE-6879-4E54-BE96-ED5747EC3FC0}"
+          SQLTask:SqlStatementSource="SELECT COUNT(*) AS RowCnt FROM DimDate"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::RowCount" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update AuditDim row"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5B50018E-FA92-4996-AB65-7D3892112428}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update AuditDim row"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CD49C2D5-0F76-49CC-89EB-42D2C6A8B08E}"
+          SQLTask:SqlStatementSource="UPDATE [DimAudit]&#xA;SET ExecStopDT = SYSDATETIME()&#xA; , ExtractRowCnt = @RC_Xtrct&#xA; ,TableFinalRowCnt = @RowCount&#xA; ,ErrorRowCnt = @RC_Error&#xA; ,SuccessfulProcessingInd='Y'&#xA;WHERE AuditKey = @AuditKey" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="RowCount"
+            SQLTask:DtsVariableName="User::RowCount"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="RC_Error"
+            SQLTask:DtsVariableName="User::RC_Error"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="AuditKey"
+            SQLTask:DtsVariableName="User::AuditKey"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="RC_Xtrct"
+            SQLTask:DtsVariableName="User::RC_Xtrct"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{778CF366-D57F-460C-9341-2B6ED5485FD8}"
+      DTS:From="Package\Pre-delete rows"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Get AuditKey" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{B29F53C6-C910-41B6-B2CD-B23CAE475FF6}"
+      DTS:From="Package\Get Dates"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Post RowCnt" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{BE745331-4F5B-4FF6-A06B-805273564BD7}"
+      DTS:From="Package\Prior RowCnt"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Pre-delete rows" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{E88B80F2-2050-4828-B14C-AC2F8F574A66}"
+      DTS:From="Package\Post RowCnt"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Update AuditDim row" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{40F63970-2931-432E-8862-F49BA47F338E}"
+      DTS:From="Package\Get AuditKey"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Get Dates" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Get AuditKey"
+          TopLeft="11,212" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\Get Dates"
+          TopLeft="18.3301886792453,308.650943396226" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Post RowCnt"
+          TopLeft="256.198113207547,310.009433962264" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Pre-delete rows"
+          TopLeft="20.745283018868,106.028301886792" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Prior RowCnt"
+          TopLeft="21.2169811320755,6.5" />
+        <NodeLayout
+          Size="153,47"
+          Id="Package\Update AuditDim row"
+          TopLeft="460.198113207547,304.858490566038" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="85.122641509434,150.028301886792">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.9716981132076"
+              Start="0,0"
+              End="0,54.4716981132076">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.4716981132076" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="144.330188679245,330.330188679245">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="111.867924528302,0"
+              Start="0,0"
+              End="104.367924528302,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="104.367924528302,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="88.9811320754717,50.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.5283018867924"
+              Start="0,0"
+              End="0,48.0283018867924">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.0283018867924" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="396.198113207547,329.683962264151">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64,0"
+              Start="0,0"
+              End="56.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="81.4150943396226,254">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.650943396226"
+              Start="0,0"
+              End="0,47.150943396226">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.150943396226" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Get Dates">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Get Dates\Load DimDate"
+          TopLeft="139.773584905661,376.306603773584" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Get Dates\Error rows to raw file"
+          TopLeft="631.603773584906,469.287735849057" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Get Dates\Row by Row"
+          TopLeft="340.566037735849,475.136792452831" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Get Dates\Row Metadata"
+          TopLeft="146,161.13679245283" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Get Dates\Flat File Text"
+          TopLeft="142,8" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Get Dates\Data Conversion"
+          TopLeft="145,231" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Get Dates\Row Count"
+          TopLeft="151.981132075471,300.042452830188" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Get Dates\Dump NULL"
+          TopLeft="146,81" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\Get Dates\Count Errors"
+          TopLeft="556.113207547169,374.25" />
+        <EdgeLayout
+          Id="Package\Get Dates.Paths[Row Count Output 11]"
+          TopLeft="645.446540880502,418.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.1572327044036,51.037735849057"
+              Start="0,0"
+              End="54.1572327044036,43.537735849057">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7711715664767" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.7711715664767"
+                    Point2="0,20.7711715664767"
+                    Point3="4,20.7711715664767" />
+                  <mssgle:LineSegment
+                    End="50.1572327044036,20.7711715664767" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.1572327044036,20.7711715664767"
+                    Point2="54.1572327044036,20.7711715664767"
+                    Point3="54.1572327044036,24.7711715664767" />
+                  <mssgle:LineSegment
+                    End="54.1572327044036,43.537735849057" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Dates.Paths[Row Count Output 1]"
+          TopLeft="216.627358490566,344.042452830188">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.264150943396"
+              Start="0,0"
+              End="0,24.764150943396">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.764150943396" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Dates.Paths[OLE DB Destination Error Output1]"
+          TopLeft="213.273584905661,418.306603773584">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="173.959119496855,56.830188679247"
+              Start="0,0"
+              End="173.959119496855,49.330188679247">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.7016235190883" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.7016235190883"
+                    Point2="0,33.7016235190883"
+                    Point3="4,33.7016235190883" />
+                  <mssgle:LineSegment
+                    End="169.959119496855,33.7016235190883" />
+                  <mssgle:CubicBezierSegment
+                    Point1="169.959119496855,33.7016235190883"
+                    Point2="173.959119496855,33.7016235190883"
+                    Point3="173.959119496855,37.7016235190883" />
+                  <mssgle:LineSegment
+                    End="173.959119496855,49.330188679247" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="14.7706534984275,38.7016235190883,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Dates.Paths[OLE DB Destination Error Output]"
+          TopLeft="429.899371069182,475.136792452831">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="172.880503144653,-56.886792452831"
+              Start="0,0"
+              End="172.880503144653,-49.386792452831">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-24.4433962264155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-24.4433962264155"
+                    Point2="0,-28.4433962264155"
+                    Point3="4,-28.4433962264155" />
+                  <mssgle:LineSegment
+                    End="168.880503144653,-28.4433962264155" />
+                  <mssgle:CubicBezierSegment
+                    Point1="168.880503144653,-28.4433962264155"
+                    Point2="172.880503144653,-28.4433962264155"
+                    Point3="172.880503144653,-32.4433962264155" />
+                  <mssgle:LineSegment
+                    End="172.880503144653,-49.386792452831" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="14.2313453223267,-23.4433962264155,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Dates.Paths[NOT NULL]"
+          TopLeft="216.75,123">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.13679245283"
+              Start="0,0"
+              End="0,30.63679245283">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.63679245283" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-23.57193359375,10.531775132665,47.1438671875,9.5732421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Dates.Paths[Flat File Source Output]"
+          TopLeft="213.25,50">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Dates.Paths[Derived Column Output]"
+          TopLeft="221.5,203.13679245283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.86320754717"
+              Start="0,0"
+              End="0,20.36320754717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.36320754717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Get Dates.Paths[Data Conversion Output]"
+          TopLeft="221.740566037735,273">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.0424528301883"
+              Start="0,0"
+              End="0,19.5424528301883">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5424528301883" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Dates\Load DimDate">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Get Dates\Row by Row">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
